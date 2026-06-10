@@ -1,18 +1,33 @@
+import Header from "./components/Header"
+import Hero from "./components/Hero"
+import Gallery from "./components/Gallery"
+
 function App() {
-    const fruits = [
-        "りんご",
-        "みかん",
-        "バナナ"
+
+    const products = [
+        {
+            name: "コーヒー",
+            price: 500
+        },
+        {
+            name: "ケーキ",
+            price: 600
+        },
+        {
+            name: "サンドイッチ",
+            price: 700
+        }
     ]
 
     return (
-        <div>
-            <h1>果物一覧</h1>
-
-            {fruits.map((fruit, index) => (
-                <p key={index}>{fruit}</p>
-            ))}
-        </div>
+        <>
+            <Header 
+                title="React学習 Day3"
+                subtitle="フロントエンドエンジニアへの道" 
+            />
+            <Hero />
+            <Gallery items={products} />
+        </>
     )
 }
 
