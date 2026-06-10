@@ -1,6 +1,7 @@
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import Gallery from "./components/Gallery"
+import Feature from "./components/Feature"
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
                 subtitle="フロントエンドエンジニアへの道" 
             />
             <Hero />
+            <Feature />
             <Gallery items={products} />
         </>
     )
