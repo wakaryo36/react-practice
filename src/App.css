@@ -182,3 +182,14 @@
     border-right-color: var(--border);
   }
 }
+
+.menu-card {
+  border: 2px solid black;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+.menu-card h3 {
+  margin-bottom: 8px;
+} 

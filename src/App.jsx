@@ -1,7 +1,9 @@
+import "./App.css"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import Gallery from "./components/Gallery"
 import Feature from "./components/Feature"
+import MenuList from "./components/MenuList"
 
 function App() {
 
@@ -29,6 +31,7 @@ function App() {
             <Hero />
             <Feature />
             <Gallery items={products} />
+            <MenuList />
         </>
     )
 }
