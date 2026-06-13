@@ -4,6 +4,7 @@ import Hero from "./components/Hero"
 import Gallery from "./components/Gallery"
 import Feature from "./components/Feature"
 import MenuList from "./components/MenuList"
+import LikeButton from "./components/LikeButton"
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
             <Feature />
             <Gallery items={products} />
             <MenuList />
+            <LikeButton />
         </>
     )
 }
