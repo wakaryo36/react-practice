@@ -7,6 +7,7 @@ import MenuList from "./components/MenuList"
 import LikeButton from "./components/LikeButton"
 import NameInput from "./components/NameInput"
 import Todo from "./components/Todo"
+import Practice from "./components/practice"
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
             <LikeButton />
             <NameInput />
             <Todo />
+            <Practice />
         </>
     )
 }
