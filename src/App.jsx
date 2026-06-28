@@ -5,6 +5,8 @@ import Gallery from "./components/Gallery"
 import Feature from "./components/Feature"
 import MenuList from "./components/MenuList"
 import LikeButton from "./components/LikeButton"
+import NameInput from "./components/NameInput"
+import Todo from "./components/Todo"
 
 function App() {
 
@@ -34,6 +36,8 @@ function App() {
             <Gallery items={products} />
             <MenuList />
             <LikeButton />
+            <NameInput />
+            <Todo />
         </>
     )
 }
