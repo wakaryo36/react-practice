@@ -1,22 +1,35 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 
 function Practice() {
 
-    const [count, setCount] = useState(0)
+    const [users, setUsers] = useState([])
+
+    const getUsers = async () => {
+
+        const response = await fetch(
+            "https://jsonplaceholder.typicode.com/users"
+        )
+
+        const data = await response.json()
+
+        setUsers(data)
+    }
 
     useEffect(() => {
-        console.log("countが変更されました")
-    }, [count])
+
+        getUsers()
+    }, [])
 
     return (
         <>
-            <h2>Day9 useEffect</h2>
+            <h2>API通信</h2>
             
-            <h3>{count}</h3>
+            <p>取得件数： {users.length}件</p>
 
-            <button onClick={() => setCount(count + 1)}>
-                +1
-            </button>
+            {users.map((user) => (
+
+                <p>{user.name}</p>
+            ))}
         </>
     )
 }
