@@ -1,23 +1,21 @@
+import { useState, useEffect } from "react"
+
 function Practice() {
 
-    function hello(name) {
-        console.log("こんにちは" + name)
-    }
+    const [count, setCount] = useState(0)
 
-    const hello2 = () => {
-        console.log("こんばんは")
-    }
+    useEffect(() => {
+        console.log("countが変更されました")
+    }, [count])
 
     return (
         <>
-            <h2>Day8 JavaScript学習</h2>
+            <h2>Day9 useEffect</h2>
             
-            <button onClick={hello}>
-                hello
-            </button>
+            <h3>{count}</h3>
 
-            <button onClick={hello2}>
-                hello2
+            <button onClick={() => setCount(count + 1)}>
+                +1
             </button>
         </>
     )
