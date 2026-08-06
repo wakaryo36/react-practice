@@ -2,36 +2,32 @@ import { useState, useEffect } from "react";
 
 function Practice() {
 
-    const [users, setUsers] = useState([])
+    const [image, setImage] = useState("")
 
-    const getUsers = async () => {
+        const getCat = async () => {
 
-        const response = await fetch(
-            "https://jsonplaceholder.typicode.com/users"
+            const response = await fetch(
+                "https://api.thecatapi.com/v1/images/search"
+            )
+
+            const data = await response.json()
+
+            setImage(data[0].url)
+        }
+
+        useEffect(() => {
+
+            getCat()
+        }, [])
+
+        return (
+            <>
+                <h2>猫画像アプリ</h2>
+
+                <img src={image} alt="猫の画像" />
+
+            </>
         )
-
-        const data = await response.json()
-
-        setUsers(data)
-    }
-
-    useEffect(() => {
-
-        getUsers()
-    }, [])
-
-    return (
-        <>
-            <h2>API通信</h2>
-            
-            <p>取得件数： {users.length}件</p>
-
-            {users.map((user) => (
-
-                <p>{user.name}</p>
-            ))}
-        </>
-    )
 }
 
 export default Practice
